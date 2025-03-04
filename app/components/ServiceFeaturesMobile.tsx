@@ -5,7 +5,7 @@ import { AnimatedList } from "./AnimatedList";
 interface Item {
   title: string;
   description: string;
-  icon: any;
+  icon: React.ComponentType<React.ComponentProps<'svg'>>;
 }
 
 let features = [

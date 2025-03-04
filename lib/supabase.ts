@@ -23,7 +23,7 @@ export const supabase = createClient(supabaseUrl, supabaseKey, {
             window.localStorage.removeItem(key)
             return null
           }
-        } catch (e) {
+        } catch {
           return storedValue
         }
         return storedValue

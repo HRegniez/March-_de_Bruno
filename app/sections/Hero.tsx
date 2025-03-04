@@ -30,7 +30,7 @@ export default function Hero({ scrollYProgress }: { scrollYProgress: MotionValue
     }, 3500);
 
     return () => clearInterval(interval);
-  }, [currentImageIndex]);
+  }, [currentImageIndex, images.length]);
 
   return (
     <div id="home" className="h-screen bg-emerald-100 sticky top-0 snap-start">
@@ -44,10 +44,8 @@ export default function Hero({ scrollYProgress }: { scrollYProgress: MotionValue
             x: `-${currentImageIndex * 100}%`
           }}
           transition={{
-            duration: 1,
-            ease: "easeInOut",
-            // Disable transition when resetting to first image
-            duration: currentImageIndex === 0 ? 0 : 1
+            duration: currentImageIndex === 0 ? 0 : 1,
+            ease: "easeInOut"
           }}
         >
           {images.map((src, index) => (
