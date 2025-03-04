@@ -1,36 +1,117 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Le Petit Marché de Bruno 🛒
 
-## Getting Started
+[![Live Site](https://img.shields.io/badge/Live%20Site-Visit%20Store-green)](https://marche-de-bruno.vercel.app/)
 
-First, run the development server:
+## Overview
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Le Petit Marché de Bruno is a modern e-commerce platform for a local grocery business in Grenoble, specializing in fresh fruits, vegetables, and specialty grocery items. Built with Next.js 15, this platform aims to bridge traditional local commerce with innovative digital solutions. This repository contains the frontend implementation, while the backend is being developed using Supabase.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🏪 Business Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Local Fresh Produce**: Fresh fruits and vegetables sourced from local producers
+- **Specialty Grocery Items**: Curated selection of fine grocery products
+- **Location**: 99 Cr Berriat, 38000 Grenoble
+- **Business Hours**: 
+  - Monday - Saturday: 8h - 19h30
+  - Sunday: 8h - 13h
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🚀 Technical Features
 
-## Learn More
+- **Modern UI/UX**: Built with React 19 and styled using Tailwind CSS
+- **Responsive Design**: Fully responsive layout optimized for all devices
+- **Smooth Animations**: Enhanced user experience with Framer Motion
+- **Interactive Maps**: Google Maps integration for store location
+- **Admin Dashboard**: Secure admin interface for product management (in development)
+- **Dynamic Content**: Real-time product updates and inventory management
+- **Type Safety**: Written in TypeScript for robust development
 
-To learn more about Next.js, take a look at the following resources:
+## 🔮 Upcoming Features
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Order Management System**: Digital ordering system for products
+- **Cryptocurrency Payments**: Integration of crypto payment options
+- **Inventory Management**: Real-time stock tracking and updates
+- **Product CRUD Operations**: Admin interface for product management
+- **Authentication System**: Secure admin access with Supabase Auth
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🛠️ Tech Stack
 
-## Deploy on Vercel
+### Frontend
+- **Framework**: Next.js 15
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **UI Components**: 
+  - Radix UI for accessible components
+  - Heroicons for icons
+  - Custom components with class-variance-authority
+- **Animation**: Framer Motion
+- **Maps**: @react-google-maps/api
+- **Deployment**: Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Backend (In Development)
+- **Platform**: Supabase
+- **Features**:
+  - Authentication for admin access
+  - Real-time database for product management
+  - Storage for product images
+  - Serverless Functions for business logic
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🚀 Getting Started
+
+1. **Clone the repository**
+   ```bash
+   git clone [repository-url]
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Set up environment variables**
+   Create a `.env.local` file with the following variables:
+   ```
+   NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
+   NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
+   ```
+
+4. **Run the development server**
+   ```bash
+   npm run dev
+   ```
+   The application will be available at `http://localhost:3000`
+
+## 🏗️ Project Structure
+
+- `/app` - Main application pages and layouts
+- `/components` - Reusable UI components
+- `/lib` - Utility functions and configurations
+- `/hooks` - Custom React hooks
+- `/types` - TypeScript type definitions
+- `/public` - Static assets
+
+## 🔄 Current Status
+
+The frontend is live at [marche-de-bruno.vercel.app](https://marche-de-bruno.vercel.app/) and actively being developed. Current focus areas:
+
+- Admin dashboard for product management
+- Integration of ordering system
+- Implementation of Supabase backend
+- Development of cryptocurrency payment system
+
+## 📞 Contact
+
+- **Phone**: +33 9 84 18 14 77
+- **Email**: contact@marchedebruno.fr
+- **Location**: 99 Cr Berriat, 38000 Grenoble, France
+
+## 📝 License
+
+This project is private and proprietary.
+
+## 🤝 Contributing
+
+This is a private project. Contact the repository owner for contribution guidelines.
+
+---
+
+Built with ❤️ in Grenoble using Next.js and Supabase
