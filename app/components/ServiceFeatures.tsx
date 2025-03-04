@@ -6,13 +6,13 @@ export default function ServiceFeatures({ scrollYProgress }: { scrollYProgress: 
   const features = [
     {
       icon: SparklesIcon,
-      title: "Produits frais et locaux",
+      title: "Produits frais, locaux & régionaux",
       description: "Fruits et légumes frais directement de nos producteurs locaux"
     },
     {
       icon: TruckIcon,
       title: "Livraison fraîcheur",
-      description: "Livraison rapide pour garantir la fraîcheur de vos produits"
+      description: "À venir très prochainement..."
     },
     {
       icon: ShoppingBagIcon,

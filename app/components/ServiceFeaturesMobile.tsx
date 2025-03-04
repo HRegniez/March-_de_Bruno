@@ -9,21 +9,21 @@ interface Item {
 }
 
 let features = [
-    {
-      icon: SparklesIcon,
-      title: "Produits frais et locaux",
-      description: "Fruits et légumes frais directement de nos producteurs locaux"
-    },
-    {
-      icon: TruckIcon,
-      title: "Livraison fraîcheur",
-      description: "Livraison rapide pour garantir la fraîcheur de vos produits"
-    },
-    {
-      icon: ShoppingBagIcon,
-      title: "Retrait en magasin",
-      description: "Récupérez vos produits frais directement en boutique"
-    }
+  {
+    icon: SparklesIcon,
+    title: "Produits frais, locaux & régionaux",
+    description: "Fruits et légumes frais directement de nos producteurs locaux"
+  },
+  {
+    icon: TruckIcon,
+    title: "Livraison fraîcheur",
+    description: "À venir très prochainement..."
+  },
+  {
+    icon: ShoppingBagIcon,
+    title: "Retrait en magasin",
+    description: "Récupérez vos produits frais directement en boutique"
+  }
   ];
 
 features = Array.from({ length: 10 }, () => features).flat();

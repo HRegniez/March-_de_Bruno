@@ -13,7 +13,7 @@ export default function Footer() {
 
             <p>99 Cr Berriat</p>
             <p>38000 Grenoble</p>
-            <p>Tél: 04 80 15 80 74</p>
+            <p>Tél: +33 9 84 18 14 77</p>
           </div>
           <div>
             <h3 className="text-xl font-bold mb-4">Suivez-nous</h3>

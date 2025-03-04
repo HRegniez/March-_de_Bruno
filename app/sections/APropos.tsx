@@ -5,7 +5,7 @@ export default function APropos() {
   const engagements = [
     {
       icon: HeartIcon,
-      text: '20 % Bio – Nos produits sont issus de l\'agriculture biologique, sans pesticides ni engrais chimiques.'
+      text: 'Sélection bio – Découvrez une gamme de produits issus de l\'agriculture biologique, sans pesticides ni engrais chimiques.'
     },
     {
       icon: TruckIcon,
@@ -38,13 +38,13 @@ export default function APropos() {
                 </div>
                 <div className="space-y-6 bg-white p-8 rounded-lg shadow-xl">
                     <p className="text-gray-700 leading-relaxed">
-                        Bienvenue chez Le <strong className="text-emerald-600">Petit Marché de Bruno</strong>, votre nouveau marché de fruits et légumes frais et locaux !
+                        Bienvenue au <strong className="text-emerald-600">Petit Marché de Bruno</strong>, votre nouveau marché de fruits et légumes frais et locaux !
                     </p>
                     <p className="text-gray-700 leading-relaxed">
-                        Nous avons à cœur de vous proposer des <strong className="text-emerald-600/90">produits frais, sains et savoureux</strong>, cultivés dans le respect de la nature et des saisons.
+                        Nous sélectionnons pour vous des <strong className="text-emerald-600/90">produits frais et de saison</strong>, complétés par une gamme d&apos;<strong className="text-emerald-600/90">épicerie fine et d&apos;ustensiles de cuisine</strong> de qualité.
                     </p>
                     <p className="text-gray-700 leading-relaxed">
-                        Bien que notre entreprise soit récente, nous reprenons le <strong className="text-emerald-600/90">flambeau d&apos;une activité locale bien ancrée</strong>, en y apportant notre passion pour une <em >alimentation plus responsable et accessible à tous</em>.
+                        Notre jeune entreprise perpétue une <strong className="text-emerald-600/90">tradition locale</strong> en y insufflant notre vision d&apos;une <em>alimentation responsable et accessible</em>.
                     </p>
                     <h4 className="text-xl font-semibold text-emerald-600 border-b-2 border-emerald-200 pb-2 mt-8">
                         Notre engagement
@@ -60,10 +60,10 @@ export default function APropos() {
                         ))}
                     </ul>
                     <p className="text-gray-700 leading-relaxed">
-                        Que vous soyez à la recherche de saveurs authentiques, de conseils sur vos choix alimentaires ou simplement d&apos;un commerce de proximité à taille humaine, nous sommes là pour vous.
+                        Que vous soyez à la recherche de <strong className="text-emerald-600/90">saveurs authentiques</strong>, de <strong className="text-emerald-600/90">conseils</strong> sur vos choix alimentaires ou simplement d&apos;un <strong className="text-emerald-600/90">commerce de proximité</strong> à taille humaine, nous sommes là pour vous.
                     </p>
                     <p className="text-gray-700 leading-relaxed italic">
-                        Rejoignez-nous dans cette aventure gourmande et engagée !
+                        Rejoignez-nous dans cette aventure gourmande et rafinée !
                     </p>
                 </div>
             </div>

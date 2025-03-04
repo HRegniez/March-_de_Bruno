@@ -56,7 +56,7 @@ export default function Home() {
               </div>
               <div>
                 <h3 className="text-xl font-semibold text-emerald-600 mb-2">Contact</h3>
-                <p className="text-gray-600">Tél: 04 80 15 80 74</p>
+                <p className="text-gray-600">Tél: +33 9 84 18 14 77</p>
                 <p className="text-gray-600">Email: contact@marchedebruno.fr</p>
               </div>
             </div>
