@@ -1,0 +1,50 @@
+{
+  "name": "Site Primeur Local",
+  "description": "Développement d'un site web pour un commerce local de fruits et légumes, inspiré de 'Les Primeurs', sans fonctionnalité e-commerce.",
+  "technologies": [
+    "Next.js",
+    "React",
+    "Supabase",
+    "Tailwind CSS",
+    "TypeScript"
+  ],
+  "guidelines": [
+    {
+      "context": "Global",
+      "instructions": [
+        "Utiliser Next.js avec App Router et Server Components lorsque pertinent.",
+        "Favoriser les composants réutilisables avec Tailwind CSS et shadcn/ui.",
+        "Optimiser les performances via les fonctionnalités natives de Next.js (SSR, ISR, SSG).",
+        "Utiliser Supabase pour la base de données (PostgreSQL) et l'authentification.",
+        "Respecter une structure de projet modulaire : components/, lib/, services/, hooks/."
+      ]
+    },
+    {
+      "context": "UI Design",
+      "instructions": [
+        "Appliquer une palette basée sur le vert émeraude (#01D758).",
+        "Suivre les principes de design mobile-first.",
+        "Utiliser des animations légères via Framer Motion si nécessaire.",
+        "Privilégier un design épuré et accessible (contrast ratios et tailles de texte adaptées)."
+      ]
+    },
+    {
+      "context": "Base de données (Supabase)",
+      "instructions": [
+        "Créer une table 'products' avec id, name, category, image_url, description, price, availability.",
+        "Créer une table 'users' avec id, email, name, created_at.",
+        "Gérer l'authentification avec Supabase Auth pour des utilisateurs enregistrés.",
+        "Utiliser Row Level Security (RLS) pour protéger les données sensibles."
+      ]
+    },
+    {
+      "context": "SEO & Performance",
+      "instructions": [
+        "Implémenter des balises meta dynamiques avec next/head ou metadata API.",
+        "Optimiser les images avec next/image pour améliorer le temps de chargement.",
+        "Utiliser un sitemap.xml et un robots.txt générés dynamiquement.",
+        "Mettre en place l'accessibilité avec eslint-plugin-jsx-a11y."
+      ]
+    }
+  ]
+}
