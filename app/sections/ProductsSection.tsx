@@ -1,6 +1,6 @@
 import { motion, useTransform, MotionValue } from 'framer-motion';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import ProductsDesktop from '../components/ProductsDesktop';
 import ProductsMobile from '../components/ProductsMobile';
 
@@ -47,8 +47,20 @@ const mockProducts = [
 ];
 
 export default function ProductsSection({ scrollYProgress }: { scrollYProgress: MotionValue<number> }) {
-    const scale = useTransform(scrollYProgress, [0, 0.5], [0.75, 1])
-    const rotate = useTransform(scrollYProgress, [0, 0.5], [-3.5, 0])
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+      const checkMobile = () => {
+        setIsMobile(window.innerWidth < 768)
+      }
+      checkMobile();
+      window.addEventListener('resize', checkMobile);
+
+      return () => window.removeEventListener('resize', checkMobile);
+    }, []);
+
+    const scale = useTransform(scrollYProgress, isMobile ? [0 , 0.5] :[0, 1], [0.5, 1])
+    const rotate = useTransform(scrollYProgress, isMobile ? [0 , 0.5] :[0, 1], [-7, 0])
     const [products] = useState(mockProducts);
 
     return (
