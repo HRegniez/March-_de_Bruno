@@ -67,7 +67,7 @@ export default function ProductsSection({ scrollYProgress }: { scrollYProgress: 
       <motion.section  
         style={{ scale, rotate }} 
         transition={{ ease: "circIn" }} 
-        className="relative px-4 md:px-16 bg-emerald-50 min-h-screen py-40 flex flex-col"
+        className="relative px-4 md:px-16 bg-emerald-50 min-h-screen py-48 flex flex-col"
       >
         <motion.div 
           id="products"

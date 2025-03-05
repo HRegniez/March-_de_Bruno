@@ -2,7 +2,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
-// import LenisProvider from './components/LenisProvider';
+import LenisProvider from './components/LenisProvider';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -22,13 +22,13 @@ export default function RootLayout({
   return (
     <html lang="fr" className="scroll-smooth">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        {/* <LenisProvider> */}
+        <LenisProvider>
           <Navigation />
           <main className="">
             {children}
           </main>
           <Footer />
-        {/* </LenisProvider> */}
+        </LenisProvider>
       </body>
     </html>
   );
