@@ -16,7 +16,7 @@ interface ProductCategory {
 }
 
 export default function ProductsMobile({ products }: { products: ProductCategory[] }) {
-    const [selectedCategory, setSelectedCategory] = useState<string | null>(null);  
+    const [selectedCategory, setSelectedCategory] = useState<string | null>(products[0]?.name || null);  
 
   return (
     <div className="md:hidden flex flex-col gap-4">

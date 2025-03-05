@@ -18,7 +18,7 @@ interface ProductCategory {
 
 
 export default function ProductsDesktop({ products }: { products: ProductCategory[] }) {
-    const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+    const [selectedCategory, setSelectedCategory] = useState<string | null>(products[0]?.name || null);
 
     return (
       <div className="hidden md:flex flex-col gap-4">
