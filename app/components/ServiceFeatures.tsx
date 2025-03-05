@@ -33,11 +33,11 @@ export default function ServiceFeatures({ scrollYProgress }: { scrollYProgress: 
                 transform: `scale(${scale})`
               }}
               whileHover={{ 
-                y: 2,
+                y: 1,
                 scale: 1.02,
                 transition: {
                   duration: 0.2,
-                  ease: "easeOut"
+                  ease: "easeIn"
                 }
               }}
               initial={{ opacity: 0.9 }}
