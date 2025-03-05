@@ -12,9 +12,9 @@ const HeroLogo = ({ scrollYProgress }: { scrollYProgress: MotionValue<number> })
       <motion.div 
         style={{ scale, rotate, opacity }}
         transition={{ ease: "easeOut" }}
-        className="fixed left-0 right-0 top-1/3 z-50 mx-auto w-fit"
+        className="fixed left-0 right-0 md:top-1/3 top-1/4 z-50 mx-auto w-fit"
       >
-          <div className="relative w-64 h-64 mb-8 rounded-full overflow-hidden bg-white shadow-xl">
+          <div className="relative md:w-64 md:h-64 w-48 h-48 mb-8 rounded-full overflow-hidden bg-white shadow-xl">
             <Image
               src="/logo.webp"
               alt="Le petit marché de Bruno"
