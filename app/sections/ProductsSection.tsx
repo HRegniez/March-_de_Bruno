@@ -47,24 +47,24 @@ const mockProducts = [
 ];
 
 export default function ProductsSection({ scrollYProgress }: { scrollYProgress: MotionValue<number> }) {
-    const scale = useTransform(scrollYProgress, [0, 1], [0.75, 1])
-    const rotate = useTransform(scrollYProgress, [0, 1], [-3.5, 0])
+    const scale = useTransform(scrollYProgress, [0, 0.5], [0.75, 1])
+    const rotate = useTransform(scrollYProgress, [0, 0.5], [-3.5, 0])
     const [products] = useState(mockProducts);
 
     return (
-      <motion.section 
-        id="products" 
+      <motion.section  
         style={{ scale, rotate }} 
         transition={{ ease: "circIn" }} 
-        className="relative px-4 md:px-8 bg-emerald-50 min-h-screen py-16 flex flex-col"
+        className="relative px-4 md:px-16 bg-emerald-50 min-h-screen py-40 flex flex-col"
       >
         <motion.div 
+          id="products"
           className="w-full max-w-7xl mx-auto"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-3xl font-bold text-center py-16 md:py-16 text-emerald-700">
+          <h2 className="text-3xl font-bold text-center py-20 md:py-16 text-emerald-700">
             Nos Produits
           </h2>
           {/* Desktop */}
