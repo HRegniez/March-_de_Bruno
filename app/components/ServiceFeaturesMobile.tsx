@@ -59,7 +59,7 @@ export function ServiceFeaturesMobile({
   className?: string;
 }) {
   return (
-    <div className={`absolute bottom-0 flex h-[33%] w-full flex-col md:hidden overflow-hidden p-2 ${className || ''}`}>
+    <div className={`absolute bottom-0 flex h-[40%] w-full flex-col md:hidden overflow-hidden p-2 ${className || ''}`}>
       <AnimatedList>
         {features.map((item, idx) => (
           <Feature {...item} key={idx} />

@@ -30,11 +30,15 @@ export default function Navigation() {
     const target = document.querySelector(id) as HTMLElement
     if (!target) return
 
+    const currentScroll = window.scrollY
+    const targetPosition = target.getBoundingClientRect().top + window.scrollY
+    const offset = id === '#products' && currentScroll < targetPosition ? -230 : 0
+
     window.lenis.scrollTo(target, {
       immediate: false,
       duration: 1.2,
       lock: true,
-      offset: id === '#products' ? -230 : 0,
+      offset,
     })
   }
 
