@@ -1,53 +1,19 @@
+'use client'
+
 import { motion, useTransform, MotionValue } from 'framer-motion';
 
 import { useState, useEffect } from 'react';
 import ProductsDesktop from '../components/ProductsDesktop';
 import ProductsMobile from '../components/ProductsMobile';
+import { getProducts } from '../lib/supabase/products';
+import type { ProductCategory } from '../lib/supabase/products';
 
-const mockProducts = [
-  {
-    id: '1',
-    name: 'Fruits',
-    image: '/fruits.webp',
-    products: [
-      { id: 'f1', name: 'Pommes Bio', price: '2.99€/kg', origin: 'France' },
-      { id: 'f2', name: 'Bananes', price: '1.99€/kg', origin: 'République Dominicaine' },
-      { id: 'f3', name: 'Oranges', price: '2.49€/kg', origin: 'Espagne' },
-      { id: 'f4', name: 'Fraises', price: '3.99€/barquette', origin: 'France' },
-      { id: 'f5', name: 'Fraises', price: '3.99€/barquette', origin: 'France' },
-      { id: 'f6', name: 'Fraises', price: '3.99€/barquette', origin: 'France' },
-    ]
-  },
-  {
-    id: '2',
-    name: 'Légumes',
-    image: '/légumes.webp',
-    products: [
-      { id: 'v1', name: 'Carottes Bio', price: '1.99€/kg', origin: 'France' },
-      { id: 'v2', name: 'Pommes de terre', price: '1.49€/kg', origin: 'France' },
-      { id: 'v3', name: 'Tomates', price: '2.99€/kg', origin: 'France' },
-      { id: 'v4', name: 'Courgettes', price: '2.49€/kg', origin: 'Espagne' },
-      { id: 'v5', name: 'Aubergines', price: '2.49€/kg', origin: 'Espagne' },
-      { id: 'v6', name: 'Poivrons', price: '2.49€/kg', origin: 'Espagne' },
-      { id: 'v7', name: 'Aubergines', price: '2.49€/kg', origin: 'Espagne' },
-      { id: 'v8', name: 'Poivrons', price: '2.49€/kg', origin: 'Espagne' },
-    ]
-  },
-  {
-    id: '3',
-    name: 'Épicerie',
-    image: '/épiceries.webp',
-    products: [
-      { id: 'e1', name: 'Huile d\'Olive Extra Vierge', price: '8.99€/75cl', origin: 'Italie' },
-      { id: 'e2', name: 'Miel de Fleurs', price: '6.49€/500g', origin: 'France' },
-      { id: 'e3', name: 'Pâtes Artisanales', price: '2.99€/500g', origin: 'Italie' },
-      { id: 'e4', name: 'Confiture Bio', price: '4.49€/pot', origin: 'France' }
-    ]
-  }
-];
+
 
 export default function ProductsSection({ scrollYProgress }: { scrollYProgress: MotionValue<number> }) {
     const [isMobile, setIsMobile] = useState(false);
+    const [products, setProducts] = useState<ProductCategory[]>([]);
+
 
     useEffect(() => {
       const checkMobile = () => {
@@ -59,9 +25,21 @@ export default function ProductsSection({ scrollYProgress }: { scrollYProgress: 
       return () => window.removeEventListener('resize', checkMobile);
     }, []);
 
+    useEffect(() => {
+      const fetchProducts = async () => {
+        try {
+          const productsData = await getProducts();
+          setProducts(productsData);
+        } catch (error) {
+          console.error('Error fetching products:', error);
+        }
+      };
+
+      fetchProducts();
+    }, []);
+
     const scale = useTransform(scrollYProgress, isMobile ? [0 , 0.5] :[0, 1], [0.5, 1])
     const rotate = useTransform(scrollYProgress, isMobile ? [0 , 0.5] :[0, 1], [-7, 0])
-    const [products] = useState(mockProducts);
 
     return (
       <motion.section  
@@ -80,9 +58,9 @@ export default function ProductsSection({ scrollYProgress }: { scrollYProgress: 
             Nos Produits
           </h2>
           {/* Desktop */}
-          <ProductsDesktop products={products} />   
+          <ProductsDesktop products={products}/>   
           {/* Mobile */}
-          <ProductsMobile products={products} />
+          <ProductsMobile products={products}/>
         </motion.div>
       </motion.section>
     )
