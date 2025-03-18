@@ -2,13 +2,8 @@ import { createClient } from '@supabase/supabase-js'
 
 // Create Supabase client
 const supabase = createClient(
-  process.env.NEXT_PUBLIC_SUPABASE_URL ?? '',
-  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY ?? '',
-  {
-    auth: {
-      persistSession: false // This can help with SSR/SSG builds
-    }
-  }
+  process.env.NEXT_PUBLIC_SUPABASE_URL!,
+  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
 )
 
 export interface Product {
