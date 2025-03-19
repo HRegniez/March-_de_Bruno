@@ -3,8 +3,7 @@
 import { motion, useTransform, MotionValue } from 'framer-motion';
 
 import { useState, useEffect } from 'react';
-import ProductsDesktop from '../components/ProductsDesktop';
-import ProductsMobile from '../components/ProductsMobile';
+import Products from '../components/Products';
 import { getProducts } from '../lib/supabase/products';
 import type { ProductCategory } from '../lib/supabase/products';
 
@@ -58,9 +57,9 @@ export default function ProductsSection({ scrollYProgress }: { scrollYProgress: 
             Nos Produits
           </h2>
           {/* Desktop */}
-          <ProductsDesktop products={products}/>   
+          {/* <ProductsDesktop products={products}/>    */}
           {/* Mobile */}
-          <ProductsMobile products={products}/>
+          <Products products={products}/>
         </motion.div>
       </motion.section>
     )

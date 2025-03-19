@@ -37,7 +37,11 @@ export default function Hero({ scrollYProgress }: { scrollYProgress: MotionValue
       {/* Updated logo positioning */}
       <HeroLogo scrollYProgress={scrollYProgress} />
 
-      <motion.section style={{ scale, rotate }} transition={{ ease: "easeIn" }} className="relative md:h-[75vh] h-full w-full mdmt-16 overflow-hidden">
+      <motion.section 
+        style={{ scale, rotate }} 
+        transition={{ ease: "easeIn" }} 
+        className="relative h-screen md:h-[65vh] lg:h-[75vh] w-full overflow-hidden"
+      >
         <motion.div 
           className="flex h-full"
           animate={{
