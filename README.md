@@ -51,8 +51,7 @@ Le Petit Marché de Bruno is a modern e-commerce platform for a local grocery bu
 - **Platform**: Supabase
 - **Features**:
   - Authentication for admin access
-  - Real-time database for product management
-  - Storage for product images
+  - Product management
   - Serverless Functions for business logic
 
 
